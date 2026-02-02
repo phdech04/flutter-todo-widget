@@ -65,9 +65,7 @@ class _TodoInputFieldState extends State<TodoInputField> {
         color: const Color.fromRGBO(26, 26, 46, 0.5),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: _showError
-              ? const Color.fromRGBO(255, 100, 100, 0.6)
-              : Colors.transparent,
+          color: const Color.fromRGBO(255, 255, 255, 0.05),
           width: 1,
         ),
       ),
