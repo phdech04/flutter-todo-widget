@@ -21,17 +21,17 @@ class MainApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           body: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF1E3A5F),
-                  Color(0xFF0D1B2A),
-                ],
+              image: DecorationImage(
+                image: AssetImage('assets/images/background.webp'),
+                fit: BoxFit.cover,
               ),
             ),
-            child: const Center(
-              child: TodoWidgetScreen(),
+            child: const Align(
+              alignment: Alignment.centerRight,
+              child: Padding(
+                padding: EdgeInsets.only(right: 40),
+                child: TodoWidgetScreen(),
+              ),
             ),
           ),
         ),
