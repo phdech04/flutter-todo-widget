@@ -28,7 +28,7 @@ class GlassmorphicContainer extends StatelessWidget {
           height: height,
           padding: padding,
           decoration: BoxDecoration(
-            color: const Color.fromRGBO(42, 42, 62, 0.8),
+            color: const Color.fromRGBO(42, 42, 42, 0.8),
             borderRadius: BorderRadius.circular(borderRadius),
             border: Border.all(
               color: const Color.fromRGBO(255, 255, 255, 0.1),
