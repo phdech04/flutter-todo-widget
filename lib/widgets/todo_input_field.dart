@@ -62,7 +62,7 @@ class _TodoInputFieldState extends State<TodoInputField> {
       duration: const Duration(milliseconds: 200),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(26, 26, 46, 0.5),
+        color: const Color.fromRGBO(26, 26, 46, 0.6),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
           color: const Color.fromRGBO(255, 255, 255, 0.05),
@@ -75,22 +75,27 @@ class _TodoInputFieldState extends State<TodoInputField> {
           TextField(
             controller: _titleController,
             focusNode: _titleFocusNode,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white, fontSize: 14),
             decoration: const InputDecoration(
               hintText: 'Title...',
-              hintStyle: TextStyle(color: Color(0xFF808080)),
+              hintStyle: TextStyle(color: Color(0xFF9A9A9A), fontSize: 14),
               border: InputBorder.none,
               isDense: true,
               contentPadding: EdgeInsets.symmetric(vertical: 4),
             ),
             onSubmitted: (_) => _handleAdd(),
           ),
+          Container(
+            height: 1,
+            color: const Color.fromRGBO(255, 255, 255, 0.1),
+            margin: const EdgeInsets.symmetric(vertical: 4),
+          ),
           TextField(
             controller: _descriptionController,
             style: const TextStyle(color: Color(0xFFB0B0B0), fontSize: 12),
             decoration: const InputDecoration(
               hintText: 'About...',
-              hintStyle: TextStyle(color: Color(0xFF808080), fontSize: 12),
+              hintStyle: TextStyle(color: Color(0xFF606060), fontSize: 12),
               border: InputBorder.none,
               isDense: true,
               contentPadding: EdgeInsets.symmetric(vertical: 4),
