@@ -11,6 +11,7 @@ class TodoList extends StatelessWidget {
     return Consumer<TodoProvider>(
       builder: (context, todoProvider, child) {
         final todos = todoProvider.todos;
+        debugPrint('TodoList build: ${todos.length} todos');
 
         return ListView.builder(
           padding: EdgeInsets.zero,
@@ -19,6 +20,7 @@ class TodoList extends StatelessWidget {
           itemBuilder: (context, index) {
             final todo = todos[index];
             return TodoCard(
+              key: ValueKey(todo.id),
               todo: todo,
               onDelete: () => todoProvider.removeTodo(todo.id),
             );

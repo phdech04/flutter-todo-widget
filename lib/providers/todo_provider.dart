@@ -7,6 +7,7 @@ class TodoProvider extends ChangeNotifier {
   List<Todo> get todos => List.unmodifiable(_todos);
 
   TodoProvider() {
+    debugPrint('TodoProvider: Initializing with sample todos');
     _todos.addAll([
       Todo(
         title: 'Make User Stories',
